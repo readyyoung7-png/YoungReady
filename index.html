@@ -1,0 +1,1443 @@
+<!DOCTYPE html><html lang="fr"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description"
+    content="YoungReady aide les jeunes à apprendre, créer du contenu, utiliser des outils numériques et trouver des opportunités en ligne.">
+
+<meta name="keywords"
+    content="YoungReady, apprendre en ligne, création de contenu, montage vidéo, TikTok, intelligence artificielle, outils gratuits, freelance">
+
+<meta name="author" content="YoungReady">
+
+<meta property="og:title"
+    content="YoungReady - Apprendre, créer et progresser en ligne">
+
+<meta property="og:description"
+    content="YoungReady t'aide à apprendre, créer du contenu et découvrir des outils et opportunités en ligne.">
+
+<title>YoungReady - Apprendre, créer et progresser en ligne</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head><body><!-- =========================
+     MENU
+========================== -->
+
+<header>
+
+    <div class="logo">
+        YoungReady
+    </div>
+
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </button>
+
+    <div
+        class="menu-overlay"
+        id="menuOverlay">
+    </div>
+
+    <nav id="mainNav">
+
+        <a href="index.html" class="active">Accueil</a>
+
+        <a href="articles.html">Articles</a>
+
+        <a href="outils.html">Outils</a>
+
+        <a href="guides.html">Guides</a>
+
+        <a href="apropos.html">À propos</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================
+     CONTENU PRINCIPAL
+========================== -->
+
+<main>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                TA PLATEFORME POUR APPRENDRE ET CRÉER
+            </p>
+
+            <h1>
+                Apprends.<br>
+                Crée.<br>
+                Progresse.
+            </h1>
+
+            <p class="description">
+                Nous partageons des astuces, des outils gratuits,
+                des guides pratiques et des opportunités pour t'aider
+                à apprendre, créer et progresser en ligne.
+            </p>
+
+            <a href="articles.html">
+                <button>
+                    Découvrir YoungReady
+                </button>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         RECHERCHE
+    ========================== -->
+
+    <section class="search-section">
+
+        <h2>
+            🔎 Que recherches-tu ?
+        </h2>
+
+        <p>
+            Trouve rapidement un article, un outil ou un guide
+            sur YoungReady.
+        </p>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Rechercher sur YoungReady..."
+                aria-label="Rechercher sur YoungReady">
+
+            <button onclick="searchYoungReady()">
+                Rechercher
+            </button>
+
+        </div>
+
+        <p id="searchMessage"></p>
+
+        <div id="searchResults"></div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTENUS POPULAIRES
+    ========================== -->
+
+    <section class="popular-section">
+
+        <h2>
+            ⭐ Contenus populaires
+        </h2>
+
+        <p class="section-description">
+            Découvre les contenus les plus utiles pour apprendre
+            et progresser.
+        </p>
+
+        <div class="cards">
+
+
+            <!-- MONTAGE VIDÉO -->
+
+            <div class="card">
+
+                <div class="icon">
+                    🎬
+                </div>
+
+                <h3>
+                    Montage vidéo
+                </h3>
+
+                <p>
+                    Apprends à créer de meilleures vidéos
+                    directement avec ton téléphone.
+                </p>
+
+                <a href="article-montage-video.html">
+                    <button>
+                        Découvrir le guide
+                    </button>
+                </a>
+
+                <a
+                    href="https://www.capcut.com/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <button>
+                        Ouvrir CapCut
+                    </button>
+
+                </a>
+
+            </div>
+
+
+            <!-- TIKTOK -->
+
+            <div class="card">
+
+                <div class="icon">
+                    📱
+                </div>
+
+                <h3>
+                    TikTok & Réseaux
+                </h3>
+
+                <p>
+                    Découvre comment créer du contenu
+                    et obtenir plus de visibilité.
+                </p>
+
+                <a href="article-tiktok.html">
+                    <button>
+                        Découvrir le guide
+                    </button>
+                </a>
+
+                <a
+                    href="https://www.tiktok.com/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <button>
+                        Ouvrir TikTok
+                    </button>
+
+                </a>
+
+            </div>
+
+
+            <!-- IA -->
+
+            <div class="card">
+
+                <div class="icon">
+                    🤖
+                </div>
+
+                <h3>
+                    Intelligence artificielle
+                </h3>
+
+                <p>
+                    Utilise l'IA pour apprendre, créer du contenu
+                    et gagner du temps.
+                </p>
+
+                <a href="article-ia.html">
+                    <button>
+                        Découvrir le guide
+                    </button>
+                </a>
+
+                <a
+                    href="https://chatgpt.com/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <button>
+                        Ouvrir ChatGPT
+                    </button>
+
+                </a>
+
+            </div>
+
+
+            <!-- FREELANCE -->
+
+            <div class="card">
+
+                <div class="icon">
+                    💼
+                </div>
+
+                <h3>
+                    Freelance
+                </h3>
+
+                <p>
+                    Apprends à développer tes compétences
+                    et trouver tes premiers clients.
+                </p>
+
+                <a href="guide-freelance.html">
+                    <button>
+                        Découvrir le guide
+                    </button>
+                </a>
+
+                <a
+                    href="https://www.upwork.com/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <button>
+                        Ouvrir Upwork
+                    </button>
+
+                </a>
+
+            </div>
+
+
+            <!-- DESIGN -->
+
+            <div class="card">
+
+                <div class="icon">
+                    🎨
+                </div>
+
+                <h3>
+                    Design avec Canva
+                </h3>
+
+                <p>
+                    Crée des designs, affiches, miniatures
+                    et contenus professionnels.
+                </p>
+
+                <a href="outil-design.html">
+                    <button>
+                        Découvrir les outils
+                    </button>
+                </a>
+
+                <a
+                    href="https://www.canva.com/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <button>
+                        Ouvrir Canva
+                    </button>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         DERNIERS CONTENUS
+    ========================== -->
+
+    <section class="latest-section">
+
+        <h2>
+            🆕 Derniers contenus
+        </h2>
+
+        <p class="section-description">
+            Découvre les nouveaux contenus publiés sur YoungReady.
+        </p>
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <div class="icon">
+                    🎬
+                </div>
+
+                <h3>
+                    Montage vidéo sur téléphone
+                </h3>
+
+                <p>
+                    Découvre les techniques essentielles
+                    pour améliorer tes montages.
+                </p>
+
+                <a href="article-montage-video.html">
+                    <button>
+                        Lire l'article →
+                    </button>
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    📱
+                </div>
+
+                <h3>
+                    Plus de vues sur TikTok
+                </h3>
+
+                <p>
+                    Découvre des méthodes simples pour améliorer
+                    tes vidéos TikTok.
+                </p>
+
+                <a href="article-tiktok.html">
+                    <button>
+                        Lire l'article →
+                    </button>
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    🤖
+                </div>
+
+                <h3>
+                    Créer du contenu avec l'IA
+                </h3>
+
+                <p>
+                    Utilise l'intelligence artificielle
+                    pour créer plus rapidement.
+                </p>
+
+                <a href="article-ia.html">
+                    <button>
+                        Lire l'article →
+                    </button>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         POURQUOI YOUNGREADY
+    ========================== -->
+
+  <section class="stats-section">
+
+    <div class="stat">
+        <span class="stat-number">10+</span>
+        <span class="stat-label">Guides pratiques</span>
+    </div>
+
+    <div class="stat">
+        <span class="stat-number">20+</span>
+        <span class="stat-label">Outils gratuits</span>
+    </div>
+
+    <div class="stat">
+        <span class="stat-number">30+</span>
+        <span class="stat-label">Astuces</span>
+    </div>
+
+    <div class="stat">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Gratuit</span>
+    </div>
+
+</section>
+
+  
+    <section class="why-section">
+
+        <h2>
+            🚀 Pourquoi YoungReady ?
+        </h2>
+
+        <p class="section-description">
+            YoungReady t'aide à apprendre, créer et trouver
+            des opportunités directement avec les outils
+            que tu as déjà.
+        </p>
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <div class="icon">
+                    🎓
+                </div>
+
+                <h3>
+                    Apprends facilement
+                </h3>
+
+                <p>
+                    Des guides simples pour développer
+                    tes compétences étape par étape.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    🛠️
+                </div>
+
+                <h3>
+                    Utilise les bons outils
+                </h3>
+
+                <p>
+                    Découvre des outils gratuits ou accessibles
+                    pour créer et travailler.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    💡
+                </div>
+
+                <h3>
+                    Passe à l'action
+                </h3>
+
+                <p>
+                    Transforme tes connaissances en projets,
+                    contenus et opportunités.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    🌍
+                </div>
+
+                <h3>
+                    Prépare ton avenir
+                </h3>
+
+                <p>
+                    Développe des compétences utiles pour Internet,
+                    le freelance et la création.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         AVANTAGES
+    ========================== -->
+
+    <section class="youngready-benefits">
+
+        <h2>
+            🚀 Ce que tu peux faire sur YoungReady
+        </h2>
+
+        <p class="section-description">
+            YoungReady t'aide à apprendre, créer et développer
+            tes compétences.
+        </p>
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <div class="icon">
+                    🎓
+                </div>
+
+                <h3>
+                    Apprendre
+                </h3>
+
+                <p>
+                    Découvre des guides simples pour développer
+                    tes compétences et apprendre de nouvelles choses.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    🛠️
+                </div>
+
+                <h3>
+                    Utiliser des outils
+                </h3>
+
+                <p>
+                    Trouve des outils gratuits et utiles pour créer
+                    du contenu, travailler et développer tes projets.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    🎬
+                </div>
+
+                <h3>
+                    Créer du contenu
+                </h3>
+
+                <p>
+                    Apprends à créer des vidéos, des designs
+                    et du contenu professionnel directement
+                    avec ton téléphone.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    💰
+                </div>
+
+                <h3>
+                    Trouver des opportunités
+                </h3>
+
+                <p>
+                    Découvre des méthodes pour développer
+                    tes compétences, trouver des clients
+                    et créer des revenus en ligne.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXPLORER YOUNGREADY
+    ========================== -->
+
+    <section class="explore-section">
+
+        <h2>
+            Explore YoungReady
+        </h2>
+
+        <p class="section-description">
+            Découvre nos différentes ressources.
+        </p>
+
+        <div class="cards">
+
+
+            <!-- CRÉATION -->
+
+            <div class="card">
+
+                <div class="icon">
+                    🎬
+                </div>
+
+                <h3>
+                    Création & Montage
+                </h3>
+
+                <p>
+                    Apprends à créer et monter de meilleures vidéos.
+                </p>
+
+                <a href="article-montage-video.html">
+                    <button>
+                        Découvrir
+                    </button>
+                </a>
+
+            </div>
+
+
+            <!-- TIKTOK -->
+
+            <div class="card">
+
+                <div class="icon">
+                    📱
+                </div>
+
+                <h3>
+                    TikTok & Réseaux
+                </h3>
+
+                <p>
+                    Découvre comment créer du contenu
+                    et obtenir plus de visibilité.
+                </p>
+
+                <a href="article-tiktok.html">
+                    <button>
+                        Découvrir
+                    </button>
+                </a>
+
+            </div>
+
+
+            <!-- GAGNER EN LIGNE -->
+
+            <div class="card">
+
+                <div class="icon">
+                    💰
+                </div>
+
+                <h3>
+                    Gagner en ligne
+                </h3>
+
+                <p>
+                    Découvre des méthodes et opportunités
+                    en ligne.
+                </p>
+
+                <a href="guide-freelance.html">
+                    <button>
+                        Découvrir
+                    </button>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         GUIDES
+    ========================== -->
+
+    <section class="guides-preview">
+
+        <h2>
+            Apprends avec nos guides
+        </h2>
+
+        <p>
+            Des guides simples et pratiques pour développer
+            tes compétences.
+        </p>
+
+        <a href="guides.html">
+            <button>
+                Voir les guides
+            </button>
+        </a>
+
+    </section>
+
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <!-- Présentation -->
+        <div class="footer-column footer-brand">
+
+            <div class="footer-logo">
+                YoungReady
+            </div>
+
+            <p>
+                Apprends, crée et progresse grâce à des ressources
+                simples, pratiques et accessibles à tous.
+            </p>
+
+        </div>
+
+
+        <!-- Navigation -->
+        <div class="footer-column">
+
+            <h3>Navigation</h3>
+
+            <a href="index.html">Accueil</a>
+            <a href="articles.html">Articles</a>
+            <a href="outils.html">Outils</a>
+            <a href="guides.html">Guides</a>
+
+        </div>
+
+
+        <!-- YoungReady -->
+        <div class="footer-column">
+
+            <h3>YoungReady</h3>
+
+            <a href="apropos.html">À propos</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+
+        <!-- Contact -->
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <a href="mailto:readyyoung7@gmail.com">
+                readyyoung7@gmail.com
+            </a>
+
+            <p>
+                Une question ou une idée ?
+                N'hésite pas à nous contacter.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bas du footer -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 YoungReady. Tous droits réservés.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="#">Confidentialité</a>
+
+            <a href="#">Conditions</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     RECHERCHE JAVASCRIPT
+========================== -->
+
+<script>
+
+    function searchYoungReady() {
+
+        const search = document
+            .getElementById("searchInput")
+            .value
+            .toLowerCase()
+            .trim();
+
+        const message =
+            document.getElementById("searchMessage");
+
+        const results =
+            document.getElementById("searchResults");
+
+        results.innerHTML = "";
+        message.textContent = "";
+
+
+        if (search === "") {
+
+            message.textContent =
+                "Écris quelque chose à rechercher.";
+
+            return;
+        }
+
+
+        const contents = [
+
+            /* =========================
+               ARTICLES
+            ========================== */
+
+            {
+                title: "Comment faire un bon montage vidéo sur téléphone",
+
+                description:
+                    "Apprends à réaliser de meilleurs montages vidéo.",
+
+                keywords:
+                    "montage vidéo video capcut édition edit keyframe",
+
+                link:
+                    "article-montage-video.html",
+
+                type:
+                    "🎬 Article"
+            },
+
+
+            {
+                title:
+                    "Comment obtenir plus de vues sur TikTok",
+
+                description:
+                    "Découvre des conseils pour améliorer tes vidéos TikTok.",
+
+                keywords:
+                    "tiktok vues abonnés réseaux instagram facebook youtube",
+
+                link:
+                    "article-tiktok.html",
+
+                type:
+                    "📱 Article"
+            },
+
+
+            {
+                title:
+                    "Comment utiliser l'IA pour créer du contenu",
+
+                description:
+                    "Utilise l'intelligence artificielle pour créer du contenu.",
+
+                keywords:
+                    "ia intelligence artificielle chatgpt contenu création",
+
+                link:
+                    "article-ia.html",
+
+                type:
+                    "🤖 Article"
+            },
+
+
+            /* =========================
+               OUTILS
+            ========================== */
+
+            {
+                title:
+                    "Outils de montage vidéo",
+
+                description:
+                    "Découvre des outils gratuits pour créer et monter tes vidéos.",
+
+                keywords:
+                    "montage vidéo capcut canva mixkit edit",
+
+                link:
+                    "outil-montage.html",
+
+                type:
+                    "🛠️ Outil"
+            },
+
+
+            {
+                title:
+                    "Outils IA",
+
+                description:
+                    "Découvre des outils utilisant l'intelligence artificielle.",
+
+                keywords:
+                    "ia intelligence artificielle chatgpt canva firefly elevenlabs",
+
+                link:
+                    "outil-ia.html",
+
+                type:
+                    "🤖 Outil"
+            },
+
+
+            {
+                title:
+                    "Outils de design",
+
+                description:
+                    "Crée des designs et visuels facilement.",
+
+                keywords:
+                    "design canva photopea figma adobe graphique",
+
+                link:
+                    "outil-design.html",
+
+                type:
+                    "🎨 Outil"
+            },
+
+
+            {
+                title:
+                    "Outils pour les réseaux sociaux",
+
+                description:
+                    "Découvre des outils pour gérer tes réseaux sociaux.",
+
+                keywords:
+                    "réseaux reseaux tiktok instagram facebook youtube buffer social",
+
+                link:
+                    "outil-reseaux.html",
+
+                type:
+                    "📱 Outil"
+            },
+
+
+            {
+                title:
+                    "Outils d'écriture",
+
+                description:
+                    "Améliore tes textes et ta création de contenu.",
+
+                keywords:
+                    "écriture ecriture texte google docs languagetool notion chatgpt",
+
+                link:
+                    "outil-ecriture.html",
+
+                type:
+                    "✍️ Outil"
+            },
+
+
+            {
+                title:
+                    "Outils pour freelance",
+
+                description:
+                    "Découvre des outils utiles pour travailler en freelance.",
+
+                keywords:
+                    "freelance travail client upwork fiverr canva whatsapp argent",
+
+                link:
+                    "outil-freelance.html",
+
+                type:
+                    "💼 Outil"
+            },
+
+
+            /* =========================
+               GUIDES
+            ========================== */
+
+            {
+                title:
+                    "Guide du montage vidéo",
+
+                description:
+                    "Apprends le montage vidéo étape par étape.",
+
+                keywords:
+                    "montage vidéo capcut keyframes musique effets export",
+
+                link:
+                    "guide-montage-video.html",
+
+                type:
+                    "🎬 Guide"
+            },
+
+
+            {
+                title:
+                    "Guide TikTok",
+
+                description:
+                    "Apprends à créer du contenu TikTok.",
+
+                keywords:
+                    "tiktok contenu vues abonnés hook réseaux",
+
+                link:
+                    "guide-tiktok.html",
+
+                type:
+                    "📱 Guide"
+            },
+
+
+            {
+                title:
+                    "Guide freelance",
+
+                description:
+                    "Apprends à trouver tes premiers clients.",
+
+                keywords:
+                    "freelance client travail argent portfolio prix activité",
+
+                link:
+                    "guide-freelance.html",
+
+                type:
+                    "💰 Guide"
+            },
+
+
+            {
+                title:
+                    "Guide IA",
+
+                description:
+                    "Apprends à utiliser l'intelligence artificielle.",
+
+                keywords:
+                    "ia intelligence artificielle chatgpt outils création",
+
+                link:
+                    "guide-ia.html",
+
+                type:
+                    "🤖 Guide"
+            },
+
+
+            {
+                title:
+                    "Guide réseaux sociaux",
+
+                description:
+                    "Développe ta présence sur les réseaux sociaux.",
+
+                keywords:
+                    "réseaux reseaux tiktok instagram facebook contenu statistiques",
+
+                link:
+                    "guide-reseaux.html",
+
+                type:
+                    "📈 Guide"
+            },
+
+
+            {
+                title:
+                    "Guide YoungReady",
+
+                description:
+                    "Découvre comment apprendre, créer et progresser avec YoungReady.",
+
+                keywords:
+                    "youngready apprendre créer progresser compétences opportunités",
+
+                link:
+                    "guide-youngready.html",
+
+                type:
+                    "🚀 Guide"
+            }
+
+        ];
+
+
+        const found = contents.filter(function(item) {
+
+            return (
+
+                item.title
+                    .toLowerCase()
+                    .includes(search)
+
+                ||
+
+                item.description
+                    .toLowerCase()
+                    .includes(search)
+
+                ||
+
+                item.keywords
+                    .toLowerCase()
+                    .includes(search)
+
+            );
+
+        });
+
+
+        if (found.length === 0) {
+
+            message.textContent =
+                "Aucun résultat trouvé pour : " + search;
+
+            return;
+        }
+
+
+        message.textContent =
+            found.length +
+            " résultat(s) trouvé(s)";
+
+
+        found.forEach(function(item) {
+
+            const card =
+                document.createElement("div");
+
+            card.className =
+                "search-result";
+
+
+            card.innerHTML = `
+
+                <div class="search-result-type">
+                    ${item.type}
+                </div>
+
+                <h3>
+                    ${item.title}
+                </h3>
+
+                <p>
+                    ${item.description}
+                </p>
+
+                <a href="${item.link}">
+                    Voir le contenu →
+                </a>
+
+            `;
+
+
+            results.appendChild(card);
+
+        });
+
+    }
+
+
+    /* =========================
+       RECHERCHE AVEC ENTRÉE
+    ========================== */
+
+    document
+        .getElementById("searchInput")
+        .addEventListener("keydown", function(event) {
+
+            if (event.key === "Enter") {
+
+                searchYoungReady();
+
+            }
+
+        });
+
+</script>
+
+
+<!-- =========================
+     MENU MOBILE JAVASCRIPT
+========================== -->
+
+<script>
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const mainNav =
+        document.getElementById("mainNav");
+
+    const menuOverlay =
+        document.getElementById("menuOverlay");
+
+
+    function closeMenu() {
+
+        menuToggle.classList.remove("active");
+
+        mainNav.classList.remove("menu-open");
+
+        menuOverlay.classList.remove("active");
+
+        document.body.classList.remove("menu-active");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+    }
+
+
+    function openMenu() {
+
+        menuToggle.classList.add("active");
+
+        mainNav.classList.add("menu-open");
+
+        menuOverlay.classList.add("active");
+
+        document.body.classList.add("menu-active");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            "true"
+        );
+
+    }
+
+
+    /* OUVRIR / FERMER */
+
+    menuToggle.addEventListener(
+        "click",
+        function() {
+
+            if (
+                mainNav.classList.contains(
+                    "menu-open"
+                )
+            ) {
+
+                closeMenu();
+
+            } else {
+
+                openMenu();
+
+            }
+
+        }
+    );
+
+
+    /* FERMER APRÈS UN CLIC SUR UN LIEN */
+
+    const menuLinks =
+        mainNav.querySelectorAll("a");
+
+
+    menuLinks.forEach(function(link) {
+
+        link.addEventListener(
+            "click",
+            function() {
+
+                closeMenu();
+
+            }
+        );
+
+    });
+
+
+    /* FERMER EN CLIQUANT SUR LE FOND */
+
+    menuOverlay.addEventListener(
+        "click",
+        function() {
+
+            closeMenu();
+
+        }
+    );
+
+
+    /* FERMER AVEC ÉCHAP */
+
+    document.addEventListener(
+        "keydown",
+        function(event) {
+
+            if (event.key === "Escape") {
+
+                closeMenu();
+
+            }
+
+        }
+    );
+
+
+    /* FERMER SI ON AGRANDIT L'ÉCRAN */
+
+    window.addEventListener(
+        "resize",
+        function() {
+
+            if (window.innerWidth > 768) {
+
+                closeMenu();
+
+            }
+
+        }
+    );
+
+</script>
+
+  <script>
+/* =========================
+   MENU ACTIF AUTOMATIQUE
+========================= */
+
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+document.querySelectorAll("#mainNav a").forEach(link => {
+    const linkPage = link.getAttribute("href");
+
+    if (linkPage === currentPage) {
+        link.classList.add("active");
+    }
+});
+  </script>
+
+</body></html>

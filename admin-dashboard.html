@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tableau de bord - YoungReady</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="admin-dashboard">
+
+        <section class="admin-header">
+
+            <span class="private-badge">
+                🔐 ESPACE PRIVÉ
+            </span>
+
+            <h1>
+                Tableau de bord YoungReady
+            </h1>
+
+            <p>
+                Gestion interne du projet YoungReady.
+            </p>
+
+        </section>
+
+
+        <section class="admin-info">
+
+            <div class="admin-info-icon">
+                🛡️
+            </div>
+
+            <h2>
+                Zone d'administration
+            </h2>
+
+            <p>
+                Cette zone est destinée à la gestion interne
+                de YoungReady.
+            </p>
+
+        </section>
+
+
+        <a href="connexion.html" class="admin-logout">
+            ← Retour à la connexion
+        </a>
+
+
+        <button id="btnDeconnexion" class="admin-logout">
+            🔒 Se déconnecter
+        </button>
+
+
+        <a href="index.html" class="admin-home">
+            ← Retour au site public
+        </a>
+
+    </main>
+
+
+    <!-- PROTECTION ADMINISTRATEUR -->
+    <script type="module" src="./admin-auth.js"></script>
+
+
+    <!-- DÉCONNEXION FIREBASE -->
+    <script type="module">
+
+        import { auth } from "./firebase-config.js";
+
+        import {
+            signOut
+        } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+
+        const btnDeconnexion =
+            document.getElementById("btnDeconnexion");
+
+
+        if (btnDeconnexion) {
+
+            btnDeconnexion.addEventListener("click", async () => {
+
+                try {
+
+                    await signOut(auth);
+
+                    window.location.href = "connexion.html";
+
+                } catch (error) {
+
+                    console.error(
+                        "Erreur de déconnexion :",
+                        error
+                    );
+
+                }
+
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>

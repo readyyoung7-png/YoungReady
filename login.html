@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Connexion administrateur - YoungReady</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f4f6f8;
+            font-family: Arial, sans-serif;
+        }
+
+        .login-box {
+            width: 90%;
+            max-width: 400px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: center;
+            color: #666;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            margin-top: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 8px;
+            background: #111;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #message {
+            margin-top: 15px;
+            text-align: center;
+            color: #d00;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+    <h1>YoungReady</h1>
+
+    <p>Connexion à l'espace privé</p>
+
+    <input
+        type="email"
+        id="email"
+        placeholder="Adresse e-mail"
+        autocomplete="email"
+    >
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Mot de passe"
+        autocomplete="current-password"
+    >
+
+    <button id="loginBtn">
+        Se connecter
+    </button>
+
+    <div id="message"></div>
+
+</div>
+
+<script type="module">
+
+    import { auth } from "./firebase-config.js";
+
+    import {
+        signInWithEmailAndPassword
+    } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const loginBtn = document.getElementById("loginBtn");
+    const message = document.getElementById("message");
+
+
+    loginBtn.addEventListener("click", async () => {
+
+        const emailValue = email.value.trim();
+        const passwordValue = password.value;
+
+        if (!emailValue || !passwordValue) {
+            message.textContent = "Veuillez remplir tous les champs.";
+            return;
+        }
+
+        loginBtn.disabled = true;
+        loginBtn.textContent = "Connexion...";
+
+        try {
+
+            await signInWithEmailAndPassword(
+                auth,
+                emailValue,
+                passwordValue
+            );
+
+            window.location.href = "admin.html";
+
+        } catch (error) {
+
+            console.error(error);
+
+            message.textContent =
+                "Adresse e-mail ou mot de passe incorrect.";
+
+            loginBtn.disabled = false;
+            loginBtn.textContent = "Se connecter";
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
