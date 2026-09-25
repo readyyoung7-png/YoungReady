@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Monétisation privée - YoungReady</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0d1117;
+            color: #ffffff;
+        }
+
+        header {
+            background: #161b22;
+            padding: 18px 20px;
+            border-bottom: 1px solid #30363d;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        header p {
+            margin: 7px 0 0;
+            color: #8b949e;
+            font-size: 14px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .private-badge {
+            display: inline-block;
+            background: #238636;
+            padding: 7px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        .intro {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 14px;
+            padding: 18px;
+            margin-bottom: 20px;
+        }
+
+        .intro h2 {
+            margin-top: 0;
+        }
+
+        .intro p {
+            color: #8b949e;
+            line-height: 1.6;
+        }
+
+        #monetisation-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .monetisation-card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 14px;
+            padding: 18px;
+        }
+
+        .monetisation-card h2 {
+            margin: 0 0 10px;
+            font-size: 19px;
+        }
+
+        .monetisation-card p {
+            margin: 0;
+            color: #8b949e;
+            line-height: 1.5;
+        }
+
+        .number {
+            color: #58a6ff;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 25px;
+            color: #8b949e;
+        }
+
+        .error {
+            background: #3d1f24;
+            border: 1px solid #f85149;
+            color: #ff7b72;
+            padding: 15px;
+            border-radius: 12px;
+            line-height: 1.5;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 18px;
+            background: #21262d;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 10px;
+            border: 1px solid #30363d;
+        }
+
+        .back-button:hover {
+            background: #30363d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🔐 Monétisation YoungReady</h1>
+        <p>Espace privé du propriétaire</p>
+    </header>
+
+    <main>
+
+        <span class="private-badge">
+            🔒 ESPACE PRIVÉ
+        </span>
+
+        <section class="intro">
+            <h2>💰 Mes 11 moyens de monétisation</h2>
+
+            <p>
+                Cet espace présente les différentes sources de revenus
+                prévues pour YoungReady. Ces informations sont réservées
+                au propriétaire du site.
+            </p>
+        </section>
+
+        <section id="monetisation-list">
+
+            <div class="loading">
+                Chargement des moyens de monétisation...
+            </div>
+
+        </section>
+
+        <a href="admin-dashboard.html"
+            class="back-button">
+            ← Retour au tableau de bord
+        </a>
+
+    </main>
+
+    <script type="module">
+
+        import { db } from "./firebase-config.js";
+
+        import {
+            collection,
+            getDocs
+        } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+
+        const container =
+            document.getElementById("monetisation-list");
+
+
+        async function afficherMonetisation() {
+
+            try {
+
+                const snapshot =
+                    await getDocs(
+                        collection(db, "monetisation")
+                    );
+
+
+                container.innerHTML = "";
+
+
+                if (snapshot.empty) {
+
+                    container.innerHTML = `
+                        <div class="error">
+                            Aucun moyen de monétisation trouvé
+                            dans Firebase.
+                        </div>
+                    `;
+
+                    return;
+                }
+
+
+                let numero = 1;
+
+
+                snapshot.forEach((document) => {
+
+                    const data = document.data();
+
+
+                    const carte =
+                        document.createElement("div");
+
+
+                    carte.className =
+                        "monetisation-card";
+
+
+                    carte.innerHTML = `
+
+                        <div class="number">
+                            ${numero}. 
+                        </div>
+
+                        <h2>
+                            ${data.titre || "Sans titre"}
+                        </h2>
+
+                        <p>
+                            ${data.description ||
+                            "Moyen de monétisation YoungReady."}
+                        </p>
+
+                    `;
+
+
+                    container.appendChild(carte);
+
+
+                    numero++;
+
+                });
+
+            }
+
+            catch (erreur) {
+
+                console.error(erreur);
+
+
+                container.innerHTML = `
+
+                    <div class="error">
+
+                        ❌ Impossible de charger
+                        les moyens de monétisation.
+
+                        <br><br>
+
+                        Vérifie que Firebase est correctement
+                        connecté et que les règles Firestore
+                        autorisent ton compte administrateur.
+
+                    </div>
+
+                `;
+
+            }
+
+        }
+
+
+        afficherMonetisation();
+
+    </script>
+
+</body>
+
+</html>
